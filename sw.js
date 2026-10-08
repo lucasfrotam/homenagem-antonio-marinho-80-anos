@@ -1,5 +1,5 @@
 /* Service worker leve: shell + capa (+ fontes/letra em runtime) */
-const CACHE = "homenagem-antonio-v8";
+const CACHE = "homenagem-antonio-v9";
 const PRECACHE = [
   "./",
   "./index.html",
