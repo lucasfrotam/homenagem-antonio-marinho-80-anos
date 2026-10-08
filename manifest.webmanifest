@@ -1,0 +1,25 @@
+{
+  "name": "Antônio Marinho · 80 anos",
+  "short_name": "Antônio 80",
+  "description": "Homenagem aos 80 anos de Antônio Marinho — letra e canção da família.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fdf8e8",
+  "theme_color": "#0a3d1f",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/favicon.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

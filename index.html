@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a3d1f">
+  <meta name="description" content="Homenagem aos 80 anos de Antônio Marinho — letra e canção da família.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Antônio Marinho — 80 anos">
+  <meta property="og:description" content="Uma canção de homenagem da família. Ouça e acompanhe a letra.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lucasfrotam.github.io/homenagem-antonio-marinho-80-anos/">
+  <meta property="og:image" content="https://lucasfrotam.github.io/homenagem-antonio-marinho-80-anos/assets/og-cover.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <title>Antônio Marinho · 80 anos</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/musica.m4a" as="audio" type="audio/mp4">
+  <link rel="preload" href="assets/fonts.css" as="style">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="wash"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <div class="sr-live" id="lyricLive" aria-live="polite" aria-atomic="true"></div>
+
+  <header class="mini-player" id="miniPlayer" aria-hidden="true">
+    <button type="button" class="mini-btn" id="miniToggle" aria-label="Tocar ou pausar a canção">
+      <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72L19 12 8 5.14z"/></svg>
+      <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7V5zm6.5 0H17v14h-3.5V5z"/></svg>
+    </button>
+    <div class="mini-body">
+      <div class="mini-meta">
+        <span class="mini-title">Antônio Marinho</span>
+        <span class="mini-sub" id="miniTime">0:00 / 0:00</span>
+      </div>
+      <input type="range" id="miniSeek" class="mini-seek" min="0" max="100" value="0" step="0.1" aria-label="Avançar ou voltar a música">
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="frame">
+        <p class="eyebrow reveal">Homenagem</p>
+        <h1 class="reveal delay-1">Antônio Marinho</h1>
+        <p class="hero-anos reveal delay-2">80 anos</p>
+
+        <figure class="portrait reveal delay-2">
+          <img src="assets/antonio-portrait.jpg" alt="Antônio Marinho" width="640" height="640" decoding="async">
+        </figure>
+
+        <p class="hero-lead reveal delay-3">Nosso pai, nosso chão — uma canção da família para celebrar a vida.</p>
+
+        <div class="player reveal delay-4 is-loading" id="mainPlayer">
+          <button type="button" class="play-btn" id="playToggle" aria-label="Tocar a canção" disabled>
+            <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72L19 12 8 5.14z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7V5zm6.5 0H17v14h-3.5V5z"/></svg>
+            <span class="play-spinner" aria-hidden="true"></span>
+          </button>
+          <div class="player-body">
+            <div class="player-labels">
+              <span id="playerSub">Carregando a canção…</span>
+            </div>
+            <div class="progress-row">
+              <span id="timeCurrent">0:00</span>
+              <input type="range" id="seek" class="seek" min="0" max="100" value="0" step="0.1" aria-label="Posição da música" disabled>
+              <span id="timeTotal">0:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions reveal delay-4">
+          <button type="button" class="share-btn" id="shareBtn" aria-live="polite">
+            <span class="share-idle">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              Copiar link
+            </span>
+            <span class="share-done" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              Link copiado
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <audio id="audio" preload="auto">
+        <source src="assets/musica.m4a" type="audio/mp4">
+        <source src="assets/musica.mp3" type="audio/mpeg">
+        <track kind="captions" srclang="pt" label="Letra" src="assets/letra.vtt" default>
+      </audio>
+    </section>
+
+    <section class="letra" aria-labelledby="letra-title">
+      <div class="section-head reveal">
+        <h2 id="letra-title">A letra</h2>
+        <p>Acompanhe linha a linha — toque em qualquer verso para ir até ele</p>
+      </div>
+      <div class="lyrics" id="lyrics" aria-busy="true"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>80 anos · Antônio Marinho · Nossa família, nossa união</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
