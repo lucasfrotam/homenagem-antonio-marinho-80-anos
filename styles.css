@@ -363,7 +363,9 @@ body.is-playing .play-btn .icon-pause {
   position: relative;
   margin: 16px auto 0;
   max-width: 26rem;
+  font-family: "Source Sans 3", system-ui, sans-serif;
   font-size: 1.05rem;
+  font-weight: 400;
   color: var(--green-soft);
   text-wrap: pretty;
 }
@@ -663,11 +665,29 @@ body.is-playing .play-btn svg {
 
 .player-labels span {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(0.98rem, 3.7vw, 1.20rem);
+  font-size: clamp(0.82rem, 2.4vw + 0.42rem, 1.12rem);
   font-weight: 700;
   color: var(--green);
   white-space: nowrap;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+@media (max-width: 390px) {
+  .player {
+    gap: 10px;
+    padding: 14px 12px;
+  }
+
+  .play-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .play-btn svg {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
 }
 
 .progress-row {
