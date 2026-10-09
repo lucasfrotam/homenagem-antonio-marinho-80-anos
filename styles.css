@@ -798,20 +798,19 @@ body.is-playing .play-btn svg {
 
 .chorus-block {
   margin: 10px 0;
-  padding: 8px 0 10px;
+  padding: 10px 16px 12px;
   border-radius: 14px;
   background: rgba(10, 61, 31, 0.07);
 }
 
-/* Mesma coluna de texto das demais linhas (sem inset extra do bloco) */
 .chorus-block .lyric-line {
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .refrao-label {
   display: block;
-  margin: 2px 0 2px 12px;
+  margin: 2px 0 4px 8px;
   font-family: "Source Sans 3", sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
